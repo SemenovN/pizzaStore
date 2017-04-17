@@ -1,7 +1,16 @@
+@import "normalize.css";
+@import "style.css";
 html {
     height: 100%;
     width: 100%;
     font-size: 12px;
+}
+@media screen and (min-width: 479px) {
+    html {font-size: 15px}
+}
+
+@media screen and (min-width: 767px) {
+    html {font-size: 18px}
 }
 * {
     box-sizing: border-box;

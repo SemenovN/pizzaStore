@@ -31,12 +31,10 @@
 
         computed: {
             ...mapGetters ({
-                productsInCart: 'cartProducts',
-                //qtyInCart: 'qtyInCart'
+                productsInCart: 'cartProducts'
             }),
             qtyInCart() {
                 var found = this.productsInCart.find(p => p.id === this.product.id)
-                //console.log(found)
                 if (typeof found == 'object') {
                     return found.quantity
                 } else {
@@ -62,7 +60,7 @@
         float: left;
         display: block;
         width: 33%;
-        padding: 30px;
+        padding: 4%;
         position: relative;
     }
     .unit-left img {
@@ -76,19 +74,19 @@
     .unit-body {
         float: left;
         width: 33%;
-        padding: 30px;
+        padding: 4%;
         text-align: left;
     }
 
     .product-name {
-        margin: 22px 0 0 0;
+        margin: 0;
         line-height: 30px;
-        font-size: 36px;
+        font-size: 1.5rem;
     }
 
     .product-description {
         color: #7f8c8d;
-        font-size: 22px;
+        font-size: 1rem;
         padding: 0;
         margin: 0;
         line-height: 30px;
@@ -97,46 +95,45 @@
     .unit-right {
         float: left;
         width: 33%;
-        padding: 26px;
+        padding: 4%;
         position: relative;
     }
 
     .price {
         line-height: 30px;
         color: #e63f52;
-        font-size: 46px;
-        margin-top: 34px;
+        font-size: 2.3rem;
     }
 
     .ordering {
-        margin-top: 28px;
-    }
-
-    .change-qty {
-        /*padding-left: 30px;*/
+        margin-top: 14%;
     }
 
     .add-button {
         border: medium none;
         border-radius: 5px;
-        padding: 12% 21%;
-        font-size: 24px;
+        padding: 12% 19%;
+        font-size: 1.2rem;
         line-height: 14px;
         background-color: #e63f52;
+        width: 100%;
+        outline: none;
     }
 
     .inc, .dec {
         padding: 12%;
-        font-size: 24px;
+        font-size: 0.9rem;
         line-height: 14px;
         float: left;
         background-color: transparent;
         border: 1px solid #e63f52;
         color: #e63f52;
+        width: 33.33333333333333%;
+        outline: none;
     }
 
     .inc {
-        padding: 12% 13.4%;
+        padding: 12% 13.7%;
     }
 
     .qty {
@@ -144,12 +141,13 @@
         background-color: #e63f52;
         display: block;
         float: left;
-        font-size: 24px;
+        font-size: 1.1rem;
         line-height: 14px;
         border: 1px solid #e63f52;
+        width: 33.3333333333333333%;
     }
 
-    @media screen and (max-width: 670px) {
+    /*@media screen and (max-width: 670px) {
         .unit-left { padding: 15px; }
         .unit-body { padding: 15px; }
         .product-name {font-size: 26px; margin: 10px 0 0 0;}
@@ -163,7 +161,7 @@
         .change-qty { padding-left: 30px; }
 
     }
-    @media screen and (max-width: 479px) {
+   /* @media screen and (max-width: 479px) {
         .product-name {font-size: 18px; margin: 6px 0 0 0;}
         .product-description {font-size: 12px; line-height: 20px}
         .unit-right { padding: 7px;}
@@ -172,5 +170,5 @@
         .dec, .qty, .add-button { font-size: 12px;}
         .change-qty { padding-left: 10px; }
 
-    }
+    }*/
 </style>

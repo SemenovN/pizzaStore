@@ -3,7 +3,7 @@
         <p v-show="!products.length"><i>Ваша корзина пуста.</i></p>
         <product-item v-for="product in products" :product="product"></product-item>
         <p>Сумма: {{ total }}</p>
-        <p><button :disabled="!products.length" @click="checkout(products)">Оформить заказ</button></p>
+        <p><button :disabled="!products.length" class="checkout" @click="checkout(products)">Оформить заказ</button></p>
         <p v-show="checkoutStatus">Оформить заказ {{ checkoutStatus }}.</p>
     </div>
 </template>
@@ -40,20 +40,13 @@
 </script>
 
 <style>
-    .product {
-        display: flex;
-    }
-    .product-item {
-        max-height: 482px;
-        flex-direction: row;
-
-    }
-
-    .product-picture {
-        flex: 0 0 auto;
-    }
-
-    .product-name {
-        display: inline-block;
+    .checkout {
+        border: medium none;
+        border-radius: 5px;
+        padding: 4% 6%;
+        font-size: 1.3rem;
+        line-height: 14px;
+        background-color: #e63f52;
+        outline: none;
     }
 </style>

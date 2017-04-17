@@ -8,6 +8,7 @@ const CartPage = resolve => require(['./pages/CartPage.vue'], resolve);
 const ProfilePage = resolve => require(['./pages/ProfilePage.vue'], resolve);
 const PromotionsPage = resolve => require(['./pages/PromotionsPage.vue'], resolve);
 const HomePage = resolve => require(['./pages/HomePage.vue'], resolve);
+const SearchPage = resolve => require(['./pages/SearchPage.vue'], resolve);
 
 const router = new VueRouter({
     mode: 'history',
@@ -17,7 +18,8 @@ const router = new VueRouter({
         { path: '/MenuPage', component: MenuPage, name: 'Меню' },
         { path: '/CartPage', component: CartPage, name: 'Корзина' },
         { path: '/ProfilePage', component: ProfilePage, name: 'Кабинет' },
-        { path: '/PromotionPage', component: PromotionsPage, name: 'Акции' }
+        { path: '/PromotionPage', component: PromotionsPage, name: 'Акции' },
+        { path: '/SearchPage', component: SearchPage, name: 'Поиск'}
     ]
 });
 

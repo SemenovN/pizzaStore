@@ -28,7 +28,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ecf0f1;
-  padding-top: 96px;
+  padding-top: 5rem;
+  padding-bottom: 7.5rem;
   background-color: #323234;
 }
 
